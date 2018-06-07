@@ -13,15 +13,17 @@ class BaseConfig:
 
 class DevelopmentConfig(BaseConfig):
     """Development configuration"""
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:baraka@localhost/users_dev'
 
 
 class TestingConfig(BaseConfig):
     """Testing configuration"""
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_TEST_URL')
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_TEST_URL')
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:baraka@localhost/users_test'
 
 
 class ProductionConfig(BaseConfig):
     """Production configuration"""
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:baraka@localhost/users_dev'
