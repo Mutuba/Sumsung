@@ -34,8 +34,7 @@ class TestTestingConfig(TestCase):
         self.assertTrue(app.config['TESTING'])
         self.assertFalse(app.config['PRESERVE_CONTEXT_ON_EXCEPTION'])
         self.assertTrue(
-            app.config['SQLALCHEMY_DATABASE_URI'] ==
-            'postgresql://postgres:baraka@localhost/users_test'
+            app.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:///:memory:'
         )
 
 

@@ -21,7 +21,7 @@ class TestingConfig(BaseConfig):
     """Testing configuration"""
     TESTING = True
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_TEST_URL')
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:baraka@localhost/users_test'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
 
 
 class ProductionConfig(BaseConfig):
